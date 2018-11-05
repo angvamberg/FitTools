@@ -31,7 +31,7 @@ export class MenuPage {
     console.log('ionViewDidLoad MenuPage');
   }
   rota(){
-    this.navCtrl.push(RotaPage);
+    this.navCtrl.setRoot(RotaPage);
   }
   exercicios(){
     this.navCtrl.push(ExerciciosPage);

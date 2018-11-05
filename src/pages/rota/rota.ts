@@ -34,16 +34,17 @@ export class RotaPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private geolocation: Geolocation,private nativeGeocoder: NativeGeocoder) {
-    this.initializeMap();
-    
+    this.ionViewDidLoad();
   }
 
   ionViewDidLoad() {
     this.initializeMap();
   }
+
   voltar(){
     this.navCtrl.push("MenuPage");
   }
+
   initializeMap() {
     this.geolocation.getCurrentPosition()
     .then((resp) => {
