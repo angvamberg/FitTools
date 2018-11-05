@@ -528,6 +528,7 @@ var RotaPage = /** @class */ (function () {
             _this.nativeGeocoder.reverseGeocode(resp.coords.latitude, resp.coords.longitude, _this.options)
                 .then(function (result) { return console.log(JSON.stringify(result[0])); })
                 .catch(function (error) { return console.log(error); });
+            _this.originPosition = _this.startPosition;
         }).catch(function (error) {
             console.log('Erro ao recuperar sua posição', error);
         });
@@ -552,11 +553,12 @@ var RotaPage = /** @class */ (function () {
     };
     RotaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-rota',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/rota/rota.html"*/'<!--\n  Generated template for the RotaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n    <ion-item>\n        <ion-label stacked>De onde?</ion-label>\n        <ion-input type="text"[(ngModel)]="startPosition"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Para onde?</ion-label>\n        <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>\n      </ion-item>\n\n      <button ion-button block  outline  style="color:black;border-color: black" (click)="calculateRoute()">Traçar rota!</button>\n    <br><br>\n\n    <div #map id="map"></div>\n\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/rota/rota.html"*/,
+            selector: 'page-rota',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/rota/rota.html"*/'<!--\n  Generated template for the RotaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n    <ion-item>\n        <ion-label stacked>De onde?</ion-label>\n        <ion-input type="text"[(ngModel)]="originPosition"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Para onde?</ion-label>\n        <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>\n      </ion-item>\n\n      <button ion-button block  outline  style="color:black;border-color: black" (click)="calculateRoute()">Traçar rota!</button>\n    <br><br>\n\n    <div #map id="map"></div>\n\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/rota/rota.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_geocoder__["a" /* NativeGeocoder */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_geocoder__["a" /* NativeGeocoder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_geocoder__["a" /* NativeGeocoder */]) === "function" && _d || Object])
     ], RotaPage);
     return RotaPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=rota.js.map
