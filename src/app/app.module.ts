@@ -20,6 +20,8 @@ import { ResultadoPage } from '../pages/resultado/resultado';
 import { ExerciciosPage } from '../pages/exercicios/exercicios';
 import { SobrePageModule } from '../pages/sobre/sobre.module';
 import { SobrePage } from '../pages/sobre/sobre';
+import { Geolocation } from '@ionic-native/geolocation';
+import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { SobrePage } from '../pages/sobre/sobre';
   ],
   providers: [
     StatusBar,
+    NativeGeocoder,
+    Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

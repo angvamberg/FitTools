@@ -8,17 +8,17 @@
     <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />
     <ion-item>
         <ion-label stacked>De onde?</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text"[(ngModel)]="startPosition"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Para onde?</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>
       </ion-item>
 
-    <button ion-button block  outline  style="color:black;border-color: black">Traçar rota!</button>
+      <button ion-button block  outline  style="color:black;border-color: black" (click)="calculateRoute()">Traçar rota!</button>
     <br><br>
 
-    <img src="https://designmodo.com/wp-content/uploads/2013/05/flat-maps.jpg">
+    <div #map id="map"></div>
 
 </ion-content>
