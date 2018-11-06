@@ -28,7 +28,6 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     HomePage,
     CronometroPage,
     ResultadoPage,
-    SobrePage,
     CronometroInicioPage,
   ],
   imports: [
@@ -38,9 +37,7 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     ImcPageModule,
     ExerciciosPageModule,
     MenuPageModule,
-    LoginPageModule,
-
-
+    LoginPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +46,6 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     CronometroPage,
     ResultadoPage,
     MenuPage,
-    SobrePage,
     CronometroInicioPage,
   ],
   providers: [
