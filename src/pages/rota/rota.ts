@@ -66,10 +66,9 @@ export class RotaPage {
       });
 
       this.nativeGeocoder.reverseGeocode(resp.coords.latitude, resp.coords.longitude, this.options)
-  .then((result: NativeGeocoderReverseResult[]) => console.log(JSON.stringify(result[0])))
-  .catch((error: any) => console.log(error));
+      .then((result: NativeGeocoderReverseResult[]) => this.originPosition = JSON.stringify(result[1]).split(",")[5].split(":")[1].replace(/[\"}]/g,"")) 
+      .catch((error: any) => console.log(error));
       
-  this.originPosition = this.startPosition;
 
     }).catch((error) => {
       console.log('Erro ao recuperar sua posição', error);
