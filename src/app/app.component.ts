@@ -1,9 +1,19 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav, MenuController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
+import firebase from 'firebase';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+
+var firebaseConfig = {
+  apiKey: "AIzaSyAFiFT-xP6QdEYW3dk8YGtS_WyOOsyvEWk",
+  authDomain: "fittoolsapp.firebaseapp.com",
+  databaseURL: "https://fittoolsapp.firebaseio.com",
+  projectId: "fittoolsapp",
+  storageBucket: "fittoolsapp.appspot.com",
+  messagingSenderId: "765478438287"
+};
 
 @Component({
   templateUrl: 'app.html'
@@ -19,6 +29,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      firebase.initializeApp(firebaseConfig);
     });
   }
   
