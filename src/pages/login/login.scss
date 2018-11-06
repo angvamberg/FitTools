@@ -1,9 +1,18 @@
 page-login {
-  ion-footer{
-    background: #00f35b !important;
-  }
-  ion-toolbar{
-    background: #00f35b !important;
+  *{
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
 
+  }
+  background: #00f35b !important;
+
+  ion-content{
+    background: #00f35b !important;
+    text-align: center;
+    margin-top: 30%;
+
+  }
+  ion-footer{
+    text-align: center;
   }
 }

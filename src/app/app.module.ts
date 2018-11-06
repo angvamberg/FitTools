@@ -1,5 +1,4 @@
 import { CronometroInicioPage } from './../pages/cronometro-inicio/cronometro-inicio';
-import { LoginnPage } from './../pages/loginn/loginn';
 import { CronometroPageModule } from './../pages/cronometro/cronometro.module';
 import { MenuPageModule } from './../pages/menu/menu.module';
 import { MenuPage } from './../pages/menu/menu';
@@ -30,7 +29,6 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     CronometroPage,
     ResultadoPage,
     SobrePage,
-    LoginnPage,
     CronometroInicioPage,
   ],
   imports: [
@@ -52,7 +50,6 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     ResultadoPage,
     MenuPage,
     SobrePage,
-    LoginnPage,
     CronometroInicioPage,
   ],
   providers: [

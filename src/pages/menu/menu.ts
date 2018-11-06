@@ -1,4 +1,3 @@
-import { LoginnPage } from './../loginn/loginn';
 import { LoginPage } from './../login/login';
 import { SobrePage } from './../sobre/sobre';
 import { ImcPage } from './../imc/imc';
@@ -43,7 +42,7 @@ export class MenuPage {
     this.navCtrl.push(SobrePage);
   }
   sair(){
-    this.navCtrl.push(LoginnPage);
+    this.navCtrl.push(LoginPage);
   }
   cronometro(){
     this.navCtrl.setRoot(CronometroInicioPage);

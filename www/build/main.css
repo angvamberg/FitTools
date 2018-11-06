@@ -30600,30 +30600,22 @@ page-imc ion-card {
   border-color: black;
 }
 
-page-login ion-footer {
+page-login {
   background: #00f35b !important;
 }
 
-page-login ion-toolbar {
-  background: #00f35b !important;
-}
-
-page-loginn {
-  background: #00f35b !important;
-}
-
-page-loginn * {
+page-login * {
   overflow-y: hidden !important;
   overflow-x: hidden !important;
 }
 
-page-loginn ion-content {
+page-login ion-content {
   background: #00f35b !important;
   text-align: center;
   margin-top: 30%;
 }
 
-page-loginn ion-footer {
+page-login ion-footer {
   text-align: center;
 }
 

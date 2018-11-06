@@ -1,4 +1,3 @@
-import { LoginnPage } from './../loginn/loginn';
 import { MenuPage } from './../menu/menu';
 import { HomePage } from './../home/home';
 
@@ -36,8 +35,5 @@ export class LoginPage {
 
   Entrar(){
     this.navCtrl.setRoot(MenuPage);
-  }
-  EntrarL(){
-    this.navCtrl.setRoot(LoginnPage);
   }
 }
