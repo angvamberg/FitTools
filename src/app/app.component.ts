@@ -27,13 +27,13 @@ export class MyApp {
     this.menuCtrl.close();
   }
 
-  setRootPage(page:string){
+  setRootPage(page:string){    
     this.nav.setRoot(page);
     this.menuCtrl.close();
   }
 
   openHome(){
-    this.nav.setRoot(HomePage);
+    this.nav.push(HomePage);
     this.menuCtrl.close();
   }
 

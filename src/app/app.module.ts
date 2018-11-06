@@ -38,7 +38,7 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     ExerciciosPageModule,
     MenuPageModule,
     LoginPageModule,
-    SobrePageModule
+    SobrePageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
