@@ -117,6 +117,6 @@ export class CronometroInicioPage {
   }
 
   voltar(){
-    this.navCtrl.push("MenuPage");
+    this.navCtrl.pop();
   }
 }

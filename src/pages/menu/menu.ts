@@ -30,7 +30,7 @@ export class MenuPage {
     console.log('ionViewDidLoad MenuPage');
   }
   rota(){
-    this.navCtrl.setRoot(RotaPage);
+    this.navCtrl.push(RotaPage);
   }
   exercicios(){
     this.navCtrl.push(ExerciciosPage);
@@ -45,7 +45,7 @@ export class MenuPage {
     this.navCtrl.push(LoginPage);
   }
   cronometro(){
-    this.navCtrl.setRoot(CronometroInicioPage);
+    this.navCtrl.push(CronometroInicioPage);
   }
 }
 

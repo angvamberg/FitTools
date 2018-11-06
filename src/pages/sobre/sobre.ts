@@ -23,6 +23,6 @@ export class SobrePage {
     console.log('ionViewDidLoad SobrePage');
   }
   voltar(){
-    this.navCtrl.push("MenuPage");
+    this.navCtrl.pop();
   }
 }

@@ -123,6 +123,6 @@ export class CronometroPage {
     this.navCtrl.push(ResultadoPage);
   }
   voltar(){
-    this.navCtrl.push("MenuPage");
+    this.navCtrl.pop();
   }
 }

@@ -48,6 +48,6 @@ export class ExerciciosPage {
     this.navCtrl.push(CronometroPage,{exercicio:item});
   }
 voltar(){
-  this.navCtrl.push("MenuPage");
+  this.navCtrl.pop();
 }
 }

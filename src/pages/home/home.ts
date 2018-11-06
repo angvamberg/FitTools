@@ -55,6 +55,6 @@ export class HomePage {
     this.limpaCampos();
   }
   voltar(){
-    this.navCtrl.push("ExerciciosPage");
+    this.navCtrl.pop();
   }
 }

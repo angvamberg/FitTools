@@ -42,7 +42,7 @@ export class RotaPage {
   }
 
   voltar(){
-    this.navCtrl.push("MenuPage");
+    this.navCtrl.pop();
   }
 
   initializeMap() {

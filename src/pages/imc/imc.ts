@@ -52,7 +52,7 @@ export class ImcPage {
     console.log('ionViewDidLoad ImcPage');
   }
   voltar(){
-    this.navCtrl.push("MenuPage");
+    this.navCtrl.pop();
   }
 
 }
