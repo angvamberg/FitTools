@@ -30609,14 +30609,44 @@ page-login * {
   overflow-x: hidden !important;
 }
 
+page-login .scroll-content {
+  padding-bottom: 0 !important;
+}
+
+page-login .alignme {
+  text-align: right;
+  margin-right: 7%;
+}
+
+page-login .alignme a {
+  text-decoration: none;
+  color: black !important;
+}
+
+page-login .img-login {
+  margin: 15% 35% 10% 35%;
+  width: 30%;
+  height: 30%;
+}
+
+page-login .inputs {
+  background: #00f35b;
+  margin: 4%;
+}
+
+page-login .botoes {
+  margin: 2%;
+}
+
 page-login ion-content {
   background: #00f35b !important;
   text-align: center;
-  margin-top: 30%;
+  padding: 2%;
 }
 
 page-login ion-footer {
   text-align: center;
+  margin: 4%;
 }
 
 page-menu ion-content {

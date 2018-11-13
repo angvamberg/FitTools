@@ -5,15 +5,9 @@ import firebase from 'firebase';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { FbPage } from '../pages/fb/fb';
 
-var firebaseConfig = {
-  apiKey: "AIzaSyAFiFT-xP6QdEYW3dk8YGtS_WyOOsyvEWk",
-  authDomain: "fittoolsapp.firebaseapp.com",
-  databaseURL: "https://fittoolsapp.firebaseio.com",
-  projectId: "fittoolsapp",
-  storageBucket: "fittoolsapp.appspot.com",
-  messagingSenderId: "765478438287"
-};
+
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +23,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      firebase.initializeApp(firebaseConfig);
+
     });
   }
   

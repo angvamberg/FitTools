@@ -71,7 +71,7 @@ export class RotaPage {
       
 
     }).catch((error) => {
-      console.log('Erro ao recuperar sua posição', error);
+      console.log('Erro ao recuperar sua posição', JSON.stringify(error));
     });
   }
 

@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 290:
+/***/ 519:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CronometroPageModule", function() { return CronometroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CronometroInicioPageModule", function() { return CronometroInicioPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cronometro__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cronometro_inicio__ = __webpack_require__(162);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CronometroPageModule = /** @class */ (function () {
-    function CronometroPageModule() {
+var CronometroInicioPageModule = /** @class */ (function () {
+    function CronometroInicioPageModule() {
     }
-    CronometroPageModule = __decorate([
+    CronometroInicioPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cronometro__["a" /* CronometroPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cronometro_inicio__["a" /* CronometroInicioPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cronometro__["a" /* CronometroPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cronometro_inicio__["a" /* CronometroInicioPage */]),
             ],
         })
-    ], CronometroPageModule);
-    return CronometroPageModule;
+    ], CronometroInicioPageModule);
+    return CronometroInicioPageModule;
 }());
 
-//# sourceMappingURL=cronometro.module.js.map
+//# sourceMappingURL=cronometro-inicio.module.js.map
 
 /***/ })
 
