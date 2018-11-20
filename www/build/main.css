@@ -4872,10 +4872,6 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
-textarea:-ms-input-placeholder {
-  padding-left: 2px;
-}
-
 textarea::-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -30540,6 +30536,59 @@ ion-navbar.toolbar {
   background: #00f35b !important;
 }
 
+page-cadastro {
+  background: #00f35b !important;
+}
+
+page-cadastro * {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
+page-cadastro .scroll-content {
+  padding-bottom: 0 !important;
+}
+
+page-cadastro .icons ion-icon {
+  font-size: 40px;
+}
+
+page-cadastro .alignme {
+  text-align: right;
+  margin-right: 7%;
+}
+
+page-cadastro .alignme a {
+  text-decoration: none;
+  color: black !important;
+}
+
+page-cadastro .img-login {
+  margin: 15% 35% 10% 35%;
+  width: 30%;
+  height: 30%;
+}
+
+page-cadastro .inputs {
+  background: #00f35b;
+  margin: 4%;
+}
+
+page-cadastro .botoes {
+  margin: 2%;
+}
+
+page-cadastro ion-content {
+  background: #00f35b !important;
+  text-align: center;
+  padding: 2%;
+}
+
+page-cadastro ion-footer {
+  text-align: center;
+  margin: 4%;
+}
+
 page-cronometro ion-content {
   background: #00f35b !important;
 }
@@ -30611,6 +30660,10 @@ page-login * {
 
 page-login .scroll-content {
   padding-bottom: 0 !important;
+}
+
+page-login .icons ion-icon {
+  font-size: 40px;
 }
 
 page-login .alignme {

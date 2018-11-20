@@ -1,3 +1,4 @@
+import { CadastroPageModule } from './../pages/cadastro/cadastro.module';
 import { CronometroInicioPage } from './../pages/cronometro-inicio/cronometro-inicio';
 import { CronometroPageModule } from './../pages/cronometro/cronometro.module';
 import { MenuPageModule } from './../pages/menu/menu.module';
@@ -26,6 +27,7 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { CadastroPage } from '../pages/cadastro/cadastro';
 
 
 var config = {apiKey: "AIzaSyAFiFT-xP6QdEYW3dk8YGtS_WyOOsyvEWk",
@@ -43,6 +45,7 @@ messagingSenderId: "765478438287"};
     CronometroPage,
     ResultadoPage,
     CronometroInicioPage,
+    CadastroPage,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ messagingSenderId: "765478438287"};
     MenuPageModule,
     LoginPageModule,
     SobrePageModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,6 +70,7 @@ messagingSenderId: "765478438287"};
     ResultadoPage,
     MenuPage,
     CronometroInicioPage,
+    CadastroPage,
   ],
   providers: [
     StatusBar,

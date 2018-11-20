@@ -1,3 +1,4 @@
+import { CronometroInicioPage } from './../cronometro-inicio/cronometro-inicio';
 import { MenuPage } from './../menu/menu';
 import { CronometroPage } from './../cronometro/cronometro';
 import { Component } from '@angular/core';
@@ -40,8 +41,8 @@ export class ExerciciosPage {
     this.navCtrl.setRoot(HomePage);
   }
 
-  comecarTreino(){
-    this.navCtrl.push(HomePage);
+  comecarTreino(exec: string){
+    this.navCtrl.push(CronometroPage,{exercicio:exec});
   }
 
   abreTreino(item:any){

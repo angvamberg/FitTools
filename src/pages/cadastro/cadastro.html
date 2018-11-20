@@ -1,0 +1,32 @@
+
+<ion-content padding>
+ 
+    <ion-item class="inputs"> 
+    <ion-label floating color="dark">Nome</ion-label>
+    <ion-input type="nome"></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-label floating color="dark">Data de Nascimento</ion-label>
+    <ion-datetime cancelText="Cancelar" doneText="Confirmar" displayFormat="DD/MM/YYYY" pickerFormat="DD/MMMM/YYYY"
+      monthNames="janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" color="secondary"></ion-datetime>
+  </ion-item>
+  <ion-item class="inputs"> 
+    <ion-label floating color="dark">Email</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item class="inputs">
+    <ion-label floating color="dark">Senha</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <button class="botoes" ion-button round color="dark">
+    CADASTRAR
+</button>
+
+<div class="icons">
+  <button ion-button full icon-left (click)='cadastroFb()'>
+    <ion-icon name="logo-facebook"></ion-icon>Login com Facebookc
+</button>     
+</div>
+</ion-content>

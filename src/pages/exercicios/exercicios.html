@@ -7,9 +7,8 @@
 
 <ion-content padding>
     <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />
-    <h5>Selecione os Exercício Abaixo:</h5>
+    <h5>Selecione o Exercício Abaixo:</h5>
   <ion-card>
-      <ion-checkbox color="dark" checked="false"></ion-checkbox>
     <img src="assets/imgs/abdominal.png" (click)="abreTreino(item)" id="abdominal"/>
     <ion-card-content>
       <ion-card-title>
@@ -23,12 +22,11 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
-      <ion-checkbox color="dark" checked="false"></ion-checkbox>
-      <img src="assets/imgs/correr.png"/>
+  <ion-card (click)="comecarTreino('Corrida')">
+            <img src="assets/imgs/correr.png"/>
       <ion-card-content>
         <ion-card-title>
-          Corrida
+          Corridass
         </ion-card-title>
         <p>
             Correr traz muitos benefícios para a qualidade de vida do indivíduo: reduz o peso corporal, melhora o nível de colesterol, aumenta a capacidade cardiorrespiratória,
@@ -37,8 +35,7 @@
       </ion-card-content>
     </ion-card>
 
-  <ion-card>
-      <ion-checkbox color="dark" checked="false"></ion-checkbox>
+  <ion-card (click)="comecarTreino('Agachamento')" >
       <img src="assets/imgs/agachamento.png"/>
       <ion-card-content>
         <ion-card-title>
@@ -50,8 +47,7 @@
         </p>
       </ion-card-content>
     </ion-card>
-    <ion-card>
-        <ion-checkbox color="dark" checked="false"></ion-checkbox>
+    <ion-card (click)="comecarTreino('Flexão')">
         <img src="assets/imgs/flexao.png"/>
         <ion-card-content>
           <ion-card-title>
@@ -63,8 +59,7 @@
           </p>
         </ion-card-content>
       </ion-card>
-      <ion-card>
-          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+      <ion-card (click)="comecarTreino('Pular corda')">
           <img src="assets/imgs/pular.png"/>
           <ion-card-content>
             <ion-card-title>
@@ -76,8 +71,7 @@
             </p>
           </ion-card-content>
         </ion-card>
-        <ion-card>
-            <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        <ion-card (click)="comecarTreino('Barra Fixa')">
             <img src="assets/imgs/barra.png"/>
             <ion-card-content>
               <ion-card-title>
@@ -89,8 +83,7 @@
               </p>
             </ion-card-content>
           </ion-card>
-          <ion-card>
-              <ion-checkbox color="dark" checked="false"></ion-checkbox>
+          <ion-card (click)="comecarTreino('Bambolê')">
               <img src="assets/imgs/bambole.png"/>
               <ion-card-content>
                 <ion-card-title>
@@ -102,8 +95,7 @@
                 </p>
               </ion-card-content>
             </ion-card>
-            <ion-card>
-                <ion-checkbox color="dark" checked="false"></ion-checkbox>
+            <ion-card (click)="comecarTreino('Natação')">
                 <img src="assets/imgs/natacao.png"/>
                 <ion-card-content>
                   <ion-card-title>
@@ -115,8 +107,7 @@
                   </p>
                 </ion-card-content>
               </ion-card>
-              <ion-card>
-                  <ion-checkbox color="dark" checked="false"></ion-checkbox>
+              <ion-card (click)="comecarTreino('Box Jump')"> 
                   <img src="assets/imgs/Box.png"/>
                   <ion-card-content>
                     <ion-card-title>
@@ -128,8 +119,7 @@
                     </p>
                   </ion-card-content>
                 </ion-card>
-                <ion-card>
-                    <ion-checkbox color="dark" checked="false"></ion-checkbox>
+                <ion-card (click)="comecarTreino('Afundo')">
                     <img src="assets/imgs/afundo.png"/>
                     <ion-card-content>
                       <ion-card-title>

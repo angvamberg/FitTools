@@ -12,6 +12,8 @@
 
   <p style="text-align: center;font-size: 67px">{{ tempo }}</p>
   <br><br><br><br>
+
+  {{exercicio}}
   <button ion-button block outline (click)="start()" [disabled]="!isenabled" style="color:black;border-color: black">Começar</button>
   <button ion-button block outline (click)="pause()" [disabled]="isenabled" style="color:black;border-color:black">{{acao}}</button>
   <button ion-button block outline (click)="stopAndClean()" style="color:black;border-color: black">Parar e Zerar</button>

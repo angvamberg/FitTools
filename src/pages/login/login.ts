@@ -1,3 +1,4 @@
+import { CadastroPage } from './../cadastro/cadastro';
 import { MenuPage } from './../menu/menu';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
@@ -40,7 +41,10 @@ export class LoginPage {
     this.navCtrl.setRoot(MenuPage);
   }
 
-  
+  cadastrar(){
+    this.navCtrl.push(CadastroPage);
+  }
+
   loginFb(){
 
     this.fb.login(['public_profile', 'user_photos', 'email', 'user_birthday'])
@@ -56,7 +60,7 @@ export class LoginPage {
        }).catch((error) => { console.log(JSON.stringify(error)) });
        this.Entrar()
    }  
-
+  
    
 
 }

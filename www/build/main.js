@@ -1,17 +1,18 @@
-webpackJsonp([3],{
+webpackJsonp([4],{
 
-/***/ 133:
+/***/ 139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu_menu__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_facebook__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase_app__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cadastro_cadastro__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_menu__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_facebook__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_fire_auth__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase_app__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_firebase_app__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21,6 +22,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -50,14 +52,17 @@ var LoginPage = /** @class */ (function () {
         this.menuCtrl.enable(true, 'myMenu');
     };
     LoginPage.prototype.Entrar = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_0__menu_menu__["a" /* MenuPage */]);
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_1__menu_menu__["a" /* MenuPage */]);
+    };
+    LoginPage.prototype.cadastrar = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__cadastro_cadastro__["a" /* CadastroPage */]);
     };
     LoginPage.prototype.loginFb = function () {
         this.fb.login(['public_profile', 'user_photos', 'email', 'user_birthday'])
             .then(function (response) {
-            var facebookCredential = __WEBPACK_IMPORTED_MODULE_5_firebase_app___default.a.auth.FacebookAuthProvider
+            var facebookCredential = __WEBPACK_IMPORTED_MODULE_6_firebase_app___default.a.auth.FacebookAuthProvider
                 .credential(response.authResponse.accessToken);
-            __WEBPACK_IMPORTED_MODULE_5_firebase_app___default.a.auth().signInAndRetrieveDataWithCredential(facebookCredential)
+            __WEBPACK_IMPORTED_MODULE_6_firebase_app___default.a.auth().signInAndRetrieveDataWithCredential(facebookCredential)
                 .then(function (success) {
                 alert("Login Efetuado com sucesso: " + JSON.stringify(success.additionalUserInfo.profile));
             });
@@ -65,12 +70,13 @@ var LoginPage = /** @class */ (function () {
         this.Entrar();
     };
     LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/login/login.html"*/'<ion-content>\n\n  <div class="img-login">\n      <img src="assets/imgs/login.png"/>\n  </div>\n  \n  \n  <ion-item class="inputs"> \n    <ion-label floating color="dark">Email</ion-label>\n    <ion-input type="email"></ion-input>\n  </ion-item>\n\n  <ion-item class="inputs">\n    <ion-label floating color="dark">Senha</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n\n\n    \n  <button class="botoes" ion-button round color="dark" (click)=\'loginFacebook();\'>\n      ENTRAR\n  </button>\n  \n  <button class="botoes" ion-button round icon-left color="dark" (click)="loginFb();">\n      <ion-icon name="logo-facebook"></ion-icon>Login com Facebook\n  </button>\n\n\n\n</ion-content>\n\n<!-- <ion-footer>\n  <img  src="assets/imgs/tw.png" style="width: 30px; height: 30p;margin-right: 7%"  (click)="Entrar()"/>\n  <img  src="assets/imgs/fb.png" style="width: 30px; height: 30p;"  (click)="loginFb()"/>\n  <img  src="assets/imgs/gm.png" style="width: 30px; height: 30p;margin-left: 7%"  (click)="Entrar()"/>\n</ion-footer> -->'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/login/login.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
+            selector: 'page-login',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/login/login.html"*/'<ion-content>\n\n\n\n  <div class="img-login">\n\n      <img src="assets/imgs/login.png"/>\n\n  </div>\n\n  \n\n  \n\n  <ion-item class="inputs"> \n\n    <ion-label floating color="dark">Email</ion-label>\n\n    <ion-input type="email"></ion-input>\n\n  </ion-item>\n\n\n\n  <ion-item class="inputs">\n\n    <ion-label floating color="dark">Senha</ion-label>\n\n    <ion-input type="password"></ion-input>\n\n  </ion-item>\n\n\n\n\n\n    \n\n  <button class="botoes" ion-button round color="dark" (click)=Entrar()>\n\n      ENTRAR\n\n  </button>\n\n  \n\n  <button class="botoes" ion-button round color="dark" (click)=cadastrar()>\n\n    CADASTRAR-SE\n\n</button>\n\n\n\n  <div class="icons">\n\n    <ion-icon name="logo-facebook"></ion-icon>\n\n\n\n  </div>\n\n\n\n      \n\n\n\n\n\n\n\n</ion-content>\n\n\n\n<!-- <ion-footer>\n\n  <img  src="assets/imgs/tw.png" style="width: 30px; height: 30p;margin-right: 7%"  (click)="Entrar()"/>\n\n  <img  src="assets/imgs/fb.png" style="width: 30px; height: 30p;"  (click)="loginFb()"/>\n\n  <img  src="assets/imgs/gm.png" style="width: 30px; height: 30p;margin-left: 7%"  (click)="Entrar()"/>\n\n</ion-footer> -->'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* MenuController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_facebook__["a" /* Facebook */], __WEBPACK_IMPORTED_MODULE_4__angular_fire_auth__["a" /* AngularFireAuth */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* MenuController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_facebook__["a" /* Facebook */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_facebook__["a" /* Facebook */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" && _e || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -207,7 +213,7 @@ var CronometroInicioPage = /** @class */ (function () {
     CronometroInicioPage.isenabled = true;
     CronometroInicioPage = CronometroInicioPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-cronometro-inicio',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/cronometro-inicio/cronometro-inicio.html"*/'<!--\n  Generated template for the CronometroPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n  <p style="text-align: center;font-size: 67px">{{ tempo }}</p>\n  <br><br><br><br>\n  <button ion-button block outline (click)="start()" [disabled]="!isenabled" style="color:black;border-color: black">Começar</button>\n  <button ion-button block outline (click)="pause()" [disabled]="isenabled" style="color:black;border-color:black">{{acao}}</button>\n  <button ion-button block outline (click)="stopAndClean()" style="color:black;border-color: black">Parar e Zerar</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/cronometro-inicio/cronometro-inicio.html"*/,
+            selector: 'page-cronometro-inicio',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/cronometro-inicio/cronometro-inicio.html"*/'<!--\n\n  Generated template for the CronometroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n\n\n\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n\n\n  <p style="text-align: center;font-size: 67px">{{ tempo }}</p>\n\n  <br><br><br><br>\n\n  <button ion-button block outline (click)="start()" [disabled]="!isenabled" style="color:black;border-color: black">Começar</button>\n\n  <button ion-button block outline (click)="pause()" [disabled]="isenabled" style="color:black;border-color:black">{{acao}}</button>\n\n  <button ion-button block outline (click)="stopAndClean()" style="color:black;border-color: black">Parar e Zerar</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/cronometro-inicio/cronometro-inicio.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], CronometroInicioPage);
@@ -223,8 +229,76 @@ var CronometroInicioPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase_app__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_firebase_app__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_facebook__ = __webpack_require__(87);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the CadastroPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CadastroPage = /** @class */ (function () {
+    function CadastroPage(navCtrl, navParams, fb, fire) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.fb = fb;
+        this.fire = fire;
+    }
+    CadastroPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CadastroPage');
+    };
+    CadastroPage.prototype.voltar = function () {
+        this.navCtrl.pop();
+    };
+    CadastroPage.prototype.cadastroFb = function () {
+        this.fb.login(['public_profile', 'user_photos', 'email', 'user_birthday'])
+            .then(function (response) {
+            var facebookCredential = __WEBPACK_IMPORTED_MODULE_3_firebase_app___default.a.auth.FacebookAuthProvider
+                .credential(response.authResponse.accessToken);
+            __WEBPACK_IMPORTED_MODULE_3_firebase_app___default.a.auth().signInAndRetrieveDataWithCredential(facebookCredential)
+                .then(function (success) {
+                alert("Login Efetuado com sucesso: " + JSON.stringify(success.additionalUserInfo.profile));
+            });
+        }).catch(function (error) { console.log(JSON.stringify(error)); });
+    };
+    CadastroPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-cadastro',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/cadastro/cadastro.html"*/'\n<ion-content padding>\n \n    <ion-item class="inputs"> \n    <ion-label floating color="dark">Nome</ion-label>\n    <ion-input type="nome"></ion-input>\n  </ion-item>\n\n  <ion-item class="inputs">\n    <ion-label floating color="dark">Data de Nascimento</ion-label>\n    <ion-datetime cancelText="Cancelar" doneText="Confirmar" displayFormat="DD/MM/YYYY" pickerFormat="DD/MMMM/YYYY"\n      monthNames="janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" color="secondary"></ion-datetime>\n  </ion-item>\n  <ion-item class="inputs"> \n    <ion-label floating color="dark">Email</ion-label>\n    <ion-input type="email"></ion-input>\n  </ion-item>\n\n  <ion-item class="inputs">\n    <ion-label floating color="dark">Senha</ion-label>\n    <ion-input type="password"></ion-input>\n  </ion-item>\n  <button class="botoes" ion-button round color="dark">\n    CADASTRAR\n</button>\n\n<div class="icons">\n  <button ion-button full icon-left (click)=\'cadastroFb()\'>\n    <ion-icon name="logo-facebook"></ion-icon>Login com Facebookc\n</button>     \n</div>\n</ion-content>\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/cadastro/cadastro.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_facebook__["a" /* Facebook */], __WEBPACK_IMPORTED_MODULE_2__angular_fire_auth__["a" /* AngularFireAuth */]])
+    ], CadastroPage);
+    return CadastroPage;
+}());
+
+//# sourceMappingURL=cadastro.js.map
+
+/***/ }),
+
+/***/ 164:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultadoPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu_menu__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu_menu__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -258,7 +332,7 @@ var ResultadoPage = /** @class */ (function () {
     };
     ResultadoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-resultado',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/resultado/resultado.html"*/'<!--\n  Generated template for the ResultadoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n\n    <h1>Você concluiu seu treino!</h1>\n\n  <ion-label >Deseja Salvar ?</ion-label>\n <button ion-button block  outline style="color:black;border-color: black;height: 3em;" (click)="abreHome()">Sim</button>\n <button ion-button block  outline color="danger" style="height: 3em;color:black;border-color: black" (click)="abreHome()">Não</button>\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/resultado/resultado.html"*/,
+            selector: 'page-resultado',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/resultado/resultado.html"*/'<!--\n\n  Generated template for the ResultadoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content padding>\n\n\n\n    <h1>Você concluiu seu treino!</h1>\n\n\n\n  <ion-label >Deseja Salvar ?</ion-label>\n\n <button ion-button block  outline style="color:black;border-color: black;height: 3em;" (click)="abreHome()">Sim</button>\n\n <button ion-button block  outline color="danger" style="height: 3em;color:black;border-color: black" (click)="abreHome()">Não</button>\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/resultado/resultado.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
     ], ResultadoPage);
@@ -269,7 +343,7 @@ var ResultadoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 202:
+/***/ 203:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -282,46 +356,50 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 202;
+webpackEmptyAsyncContext.id = 203;
 
 /***/ }),
 
-/***/ 243:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/cadastro/cadastro.module": [
+		520,
+		3
+	],
 	"../pages/cronometro-inicio/cronometro-inicio.module": [
-		519,
+		521,
 		2
 	],
 	"../pages/cronometro/cronometro.module": [
-		520,
+		522,
 		1
 	],
 	"../pages/exercicios/exercicios.module": [
-		254
+		257
 	],
 	"../pages/fb/fb.module": [
-		255
+		258
 	],
 	"../pages/imc/imc.module": [
-		256
-	],
-	"../pages/login/login.module": [
 		259
 	],
-	"../pages/menu/menu.module": [
+	"../pages/login/login.module": [
 		260
 	],
+	"../pages/menu/menu.module": [
+		261
+	],
 	"../pages/resultado/resultado.module": [
-		521,
+		523,
 		0
 	],
 	"../pages/rota/rota.module": [
-		261
+		262
 	],
 	"../pages/sobre/sobre.module": [
-		262
+		263
 	]
 };
 function webpackAsyncContext(req) {
@@ -335,12 +413,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 243;
+webpackAsyncContext.id = 244;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 248:
+/***/ 251:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -377,7 +455,7 @@ var SobrePage = /** @class */ (function () {
     };
     SobrePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-sobre',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/sobre/sobre.html"*/'<!--\n  Generated template for the SobrePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n    <h2 style="text-align: center"> Nossa Equipe</h2>\n  O FitApp foi desenvolvido por uma equipe de estudantes voltado para quem quer fazer exercícios funcionais em casa.\n   O aplicativo conta com uma série recursos e dicas para facilitar e ajudar aqueles que querem seguir ou montar o seu próprio treinamento.\n   O FitApp conta contem  um cronômetro, dicas de exercício, cálculo IMC(índice de massa corporal) e um GPS para aqueles que correm ou caminham pode traçar e acompanhar seu seu percurso.\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/sobre/sobre.html"*/,
+            selector: 'page-sobre',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/sobre/sobre.html"*/'<!--\n\n  Generated template for the SobrePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n\n\n    <h2 style="text-align: center"> Nossa Equipe</h2>\n\n  O FitApp foi desenvolvido por uma equipe de estudantes voltado para quem quer fazer exercícios funcionais em casa.\n\n   O aplicativo conta com uma série recursos e dicas para facilitar e ajudar aqueles que querem seguir ou montar o seu próprio treinamento.\n\n   O FitApp conta contem  um cronômetro, dicas de exercício, cálculo IMC(índice de massa corporal) e um GPS para aqueles que correm ou caminham pode traçar e acompanhar seu seu percurso.\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/sobre/sobre.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], SobrePage);
@@ -388,7 +466,7 @@ var SobrePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 249:
+/***/ 252:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -452,7 +530,7 @@ var ImcPage = /** @class */ (function () {
     };
     ImcPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-imc',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/imc/imc.html"*/'<!--\n  Generated template for the ImcPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n  <ion-list>\n    <ion-item>\n      <ion-label floating>peso (kg)</ion-label>\n      <ion-input type="number" [(ngModel)]="peso" [brmasker]="{mask:\'00.00\'}"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>altura (cm)</ion-label>\n      <ion-input type="number" [(ngModel)]="altura" [brmasker]="{mask:\'0.000\'}"></ion-input>\n    </ion-item>\n  </ion-list>\n  <div padding>\n    <button  ion-button block  outline style="color:black;border-color: black" (click)="calculoImc()">Calcular</button>\n\n  </div>\n\n  <ion-card *ngIf="imcValor">\n    <ion-card-header>\n      Calculo de IMC\n    </ion-card-header>\n    <ion-card-content>\n      <p>Seu: peso {{this.peso}} kg, altura {{this.altura}} cm</p>\n      <p>IMC: {{imcValor}}</p>\n      <p><strong>Você está {{imcMenssagem}}</strong></p>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/imc/imc.html"*/,
+            selector: 'page-imc',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/imc/imc.html"*/'<!--\n\n  Generated template for the ImcPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label floating>peso (kg)</ion-label>\n\n      <ion-input type="number" [(ngModel)]="peso" [brmasker]="{mask:\'00.00\'}"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>altura (cm)</ion-label>\n\n      <ion-input type="number" [(ngModel)]="altura" [brmasker]="{mask:\'0.000\'}"></ion-input>\n\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n\n    <button  ion-button block  outline style="color:black;border-color: black" (click)="calculoImc()">Calcular</button>\n\n\n\n  </div>\n\n\n\n  <ion-card *ngIf="imcValor">\n\n    <ion-card-header>\n\n      Calculo de IMC\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <p>Seu: peso {{this.peso}} kg, altura {{this.altura}} cm</p>\n\n      <p>IMC: {{imcValor}}</p>\n\n      <p><strong>Você está {{imcMenssagem}}</strong></p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/imc/imc.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], ImcPage);
@@ -463,15 +541,15 @@ var ImcPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 250:
+/***/ 253:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExerciciosPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cronometro_cronometro__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cronometro_cronometro__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(94);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -514,8 +592,8 @@ var ExerciciosPage = /** @class */ (function () {
     ExerciciosPage.prototype.teste = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
     };
-    ExerciciosPage.prototype.comecarTreino = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+    ExerciciosPage.prototype.comecarTreino = function (exec) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__cronometro_cronometro__["a" /* CronometroPage */], { exercicio: exec });
     };
     ExerciciosPage.prototype.abreTreino = function (item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_0__cronometro_cronometro__["a" /* CronometroPage */], { exercicio: item });
@@ -525,7 +603,7 @@ var ExerciciosPage = /** @class */ (function () {
     };
     ExerciciosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-exercicios',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/exercicios/exercicios.html"*/'<!--\n  Generated template for the ExerciciosPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n    <h5>Selecione os Exercício Abaixo:</h5>\n  <ion-card>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n    <img src="assets/imgs/abdominal.png" (click)="abreTreino(item)" id="abdominal"/>\n    <ion-card-content>\n      <ion-card-title>\n        Abdominal\n      </ion-card-title>\n      <p>\n          É um exercício que vai fortalecer e dar mais resistência para a musculatura do abdomem.\n          O abdômen se localiza no tronco, na região da barriga e é composto por orgãos internos como estômago,\n          intestino, dentre outros e por um grupo muscular formado por quatro músculos principais: reto, oblíquo interno, oblíquo externo e  transverso.\n      </p>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n      <img src="assets/imgs/correr.png"/>\n      <ion-card-content>\n        <ion-card-title>\n          Corrida\n        </ion-card-title>\n        <p>\n            Correr traz muitos benefícios para a qualidade de vida do indivíduo: reduz o peso corporal, melhora o nível de colesterol, aumenta a capacidade cardiorrespiratória,\n             reduz os riscos de infarto, aumenta a massa muscular, reduz a variação da pressão arterial de repouso.\n        </p>\n      </ion-card-content>\n    </ion-card>\n\n  <ion-card>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n      <img src="assets/imgs/agachamento.png"/>\n      <ion-card-content>\n        <ion-card-title>\n          Agachamento\n        </ion-card-title>\n        <p>\n            O agachamento, também conhecido por squat, é um exercício muito completo, pois, além de exercitar o bumbum, trabalha a barriga, as coxas e as costas,\n             ajudando a emagrecer, perder gordura e celulite e a endurecer os músculos, obtendo-se resultados em homens e mulheres.\n        </p>\n      </ion-card-content>\n    </ion-card>\n    <ion-card>\n        <ion-checkbox color="dark" checked="false"></ion-checkbox>\n        <img src="assets/imgs/flexao.png"/>\n        <ion-card-content>\n          <ion-card-title>\n              Flexão de braço\n          </ion-card-title>\n          <p>\n              Se você quer exercitar vários músculos ao mesmo tempo, então a flexão de braços é uma das melhores opções. Essa atividade envolve a flexão horizontal da articulação do ombro e a extensão do cotovelo.\n              Possibilitar esse movimento exige a participação de muitos músculos: peitoral maior, deltoide anterior e tríceps.\n          </p>\n        </ion-card-content>\n      </ion-card>\n      <ion-card>\n          <ion-checkbox color="dark" checked="false"></ion-checkbox>\n          <img src="assets/imgs/pular.png"/>\n          <ion-card-content>\n            <ion-card-title>\n               Pular Corda\n            </ion-card-title>\n            <p>\n                Pular corda é uma ótima opção de exercício aeróbico. Em 15 minutos de atividade você perde 180 calorias.\n                Este mesmo período equivale a 1 hora de caminhada. A corda fortalece os ossos e os membros inferiores (coxa, panturrilha).\n            </p>\n          </ion-card-content>\n        </ion-card>\n        <ion-card>\n            <ion-checkbox color="dark" checked="false"></ion-checkbox>\n            <img src="assets/imgs/barra.png"/>\n            <ion-card-content>\n              <ion-card-title>\n                 Barra Fixa\n              </ion-card-title>\n              <p>\n                   Além de trabalhar as costas (principalmente asa) e bíceps,\n                   no movimento tradicional, você pode fortalecer seu abdômen fazendo isometria (travar o movimento em cima, concentrando forças no abdômen).\n              </p>\n            </ion-card-content>\n          </ion-card>\n          <ion-card>\n              <ion-checkbox color="dark" checked="false"></ion-checkbox>\n              <img src="assets/imgs/bambole.png"/>\n              <ion-card-content>\n                <ion-card-title>\n                   Bambolê\n                </ion-card-title>\n                <p>\n                    O bambolê hoje em dia é feito com aros muito mais pesados do que antes,\n                     e oferece um ótimo exercício aeróbico. Você pode perder 400 calorias facilmente em uma hora com o bambolê (o número real depende do peso do aro).\n                </p>\n              </ion-card-content>\n            </ion-card>\n            <ion-card>\n                <ion-checkbox color="dark" checked="false"></ion-checkbox>\n                <img src="assets/imgs/natacao.png"/>\n                <ion-card-content>\n                  <ion-card-title>\n                     Natação\n                  </ion-card-title>\n                  <p>\n                      A natação é considerada um dos esportes mais completos que existem. Isso porque, ao nadar, você trabalha diversos grupos musculares ao mesmo tempo\n                      . Não à toa, é uma das modalidades esportivas mais indicadas tanto para quem quer ganhar massa muscular quanto para quem busca definição e perda calórica.\n                  </p>\n                </ion-card-content>\n              </ion-card>\n              <ion-card>\n                  <ion-checkbox color="dark" checked="false"></ion-checkbox>\n                  <img src="assets/imgs/Box.png"/>\n                  <ion-card-content>\n                    <ion-card-title>\n                        Box jumps\n                    </ion-card-title>\n                    <p>\n                        O box jump é um exercício de alta intensidade e esforço, então é claro que vai contribuir (e muito) para queimar calorias.\n                        Para quem quer emagrecer ele pode fazer parte da rotina já que ajuda no processo de desenvolvimento muscular e ainda expulsa as gordurinhas extras do corpo.\n                    </p>\n                  </ion-card-content>\n                </ion-card>\n                <ion-card>\n                    <ion-checkbox color="dark" checked="false"></ion-checkbox>\n                    <img src="assets/imgs/afundo.png"/>\n                    <ion-card-content>\n                      <ion-card-title>\n                          Afundo\n                      </ion-card-title>\n                      <p>\n                          Um ótimo exercício que envolve o peso corporal para treinar as pernas, mas que é diferente do agachamento, já que é mais focado nos glúteos e isquiotibiais.\n                 Existem diversas variações deste exercício disponível, como por exemplo realizá-lo apenas com uma perna para assim se focar mais na mesma. Outra variação,\n                  que atinge mais os glúteos, é o afundo de lado.\n                  </p>\n                    </ion-card-content>\n                  </ion-card>\n\n                  <button ion-button block outline style="color:black;border-color: black"(click)="comecarTreino()">Começar Treino</button>\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/exercicios/exercicios.html"*/,
+            selector: 'page-exercicios',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/exercicios/exercicios.html"*/'<!--\n\n  Generated template for the ExerciciosPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n    <h5>Selecione o Exercício Abaixo:</h5>\n\n  <ion-card>\n\n    <img src="assets/imgs/abdominal.png" (click)="abreTreino(item)" id="abdominal"/>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        Abdominal\n\n      </ion-card-title>\n\n      <p>\n\n          É um exercício que vai fortalecer e dar mais resistência para a musculatura do abdomem.\n\n          O abdômen se localiza no tronco, na região da barriga e é composto por orgãos internos como estômago,\n\n          intestino, dentre outros e por um grupo muscular formado por quatro músculos principais: reto, oblíquo interno, oblíquo externo e  transverso.\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <ion-card (click)="comecarTreino(\'Corrida\')">\n\n            <img src="assets/imgs/correr.png"/>\n\n      <ion-card-content>\n\n        <ion-card-title>\n\n          Corridass\n\n        </ion-card-title>\n\n        <p>\n\n            Correr traz muitos benefícios para a qualidade de vida do indivíduo: reduz o peso corporal, melhora o nível de colesterol, aumenta a capacidade cardiorrespiratória,\n\n             reduz os riscos de infarto, aumenta a massa muscular, reduz a variação da pressão arterial de repouso.\n\n        </p>\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n  <ion-card (click)="comecarTreino(\'Agachamento\')" >\n\n      <img src="assets/imgs/agachamento.png"/>\n\n      <ion-card-content>\n\n        <ion-card-title>\n\n          Agachamento\n\n        </ion-card-title>\n\n        <p>\n\n            O agachamento, também conhecido por squat, é um exercício muito completo, pois, além de exercitar o bumbum, trabalha a barriga, as coxas e as costas,\n\n             ajudando a emagrecer, perder gordura e celulite e a endurecer os músculos, obtendo-se resultados em homens e mulheres.\n\n        </p>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-card (click)="comecarTreino(\'Flexão\')">\n\n        <img src="assets/imgs/flexao.png"/>\n\n        <ion-card-content>\n\n          <ion-card-title>\n\n              Flexão de braço\n\n          </ion-card-title>\n\n          <p>\n\n              Se você quer exercitar vários músculos ao mesmo tempo, então a flexão de braços é uma das melhores opções. Essa atividade envolve a flexão horizontal da articulação do ombro e a extensão do cotovelo.\n\n              Possibilitar esse movimento exige a participação de muitos músculos: peitoral maior, deltoide anterior e tríceps.\n\n          </p>\n\n        </ion-card-content>\n\n      </ion-card>\n\n      <ion-card (click)="comecarTreino(\'Pular corda\')">\n\n          <img src="assets/imgs/pular.png"/>\n\n          <ion-card-content>\n\n            <ion-card-title>\n\n               Pular Corda\n\n            </ion-card-title>\n\n            <p>\n\n                Pular corda é uma ótima opção de exercício aeróbico. Em 15 minutos de atividade você perde 180 calorias.\n\n                Este mesmo período equivale a 1 hora de caminhada. A corda fortalece os ossos e os membros inferiores (coxa, panturrilha).\n\n            </p>\n\n          </ion-card-content>\n\n        </ion-card>\n\n        <ion-card (click)="comecarTreino(\'Barra Fixa\')">\n\n            <img src="assets/imgs/barra.png"/>\n\n            <ion-card-content>\n\n              <ion-card-title>\n\n                 Barra Fixa\n\n              </ion-card-title>\n\n              <p>\n\n                   Além de trabalhar as costas (principalmente asa) e bíceps,\n\n                   no movimento tradicional, você pode fortalecer seu abdômen fazendo isometria (travar o movimento em cima, concentrando forças no abdômen).\n\n              </p>\n\n            </ion-card-content>\n\n          </ion-card>\n\n          <ion-card (click)="comecarTreino(\'Bambolê\')">\n\n              <img src="assets/imgs/bambole.png"/>\n\n              <ion-card-content>\n\n                <ion-card-title>\n\n                   Bambolê\n\n                </ion-card-title>\n\n                <p>\n\n                    O bambolê hoje em dia é feito com aros muito mais pesados do que antes,\n\n                     e oferece um ótimo exercício aeróbico. Você pode perder 400 calorias facilmente em uma hora com o bambolê (o número real depende do peso do aro).\n\n                </p>\n\n              </ion-card-content>\n\n            </ion-card>\n\n            <ion-card (click)="comecarTreino(\'Natação\')">\n\n                <img src="assets/imgs/natacao.png"/>\n\n                <ion-card-content>\n\n                  <ion-card-title>\n\n                     Natação\n\n                  </ion-card-title>\n\n                  <p>\n\n                      A natação é considerada um dos esportes mais completos que existem. Isso porque, ao nadar, você trabalha diversos grupos musculares ao mesmo tempo\n\n                      . Não à toa, é uma das modalidades esportivas mais indicadas tanto para quem quer ganhar massa muscular quanto para quem busca definição e perda calórica.\n\n                  </p>\n\n                </ion-card-content>\n\n              </ion-card>\n\n              <ion-card (click)="comecarTreino(\'Box Jump\')"> \n\n                  <img src="assets/imgs/Box.png"/>\n\n                  <ion-card-content>\n\n                    <ion-card-title>\n\n                        Box jumps\n\n                    </ion-card-title>\n\n                    <p>\n\n                        O box jump é um exercício de alta intensidade e esforço, então é claro que vai contribuir (e muito) para queimar calorias.\n\n                        Para quem quer emagrecer ele pode fazer parte da rotina já que ajuda no processo de desenvolvimento muscular e ainda expulsa as gordurinhas extras do corpo.\n\n                    </p>\n\n                  </ion-card-content>\n\n                </ion-card>\n\n                <ion-card (click)="comecarTreino(\'Afundo\')">\n\n                    <img src="assets/imgs/afundo.png"/>\n\n                    <ion-card-content>\n\n                      <ion-card-title>\n\n                          Afundo\n\n                      </ion-card-title>\n\n                      <p>\n\n                          Um ótimo exercício que envolve o peso corporal para treinar as pernas, mas que é diferente do agachamento, já que é mais focado nos glúteos e isquiotibiais.\n\n                 Existem diversas variações deste exercício disponível, como por exemplo realizá-lo apenas com uma perna para assim se focar mais na mesma. Outra variação,\n\n                  que atinge mais os glúteos, é o afundo de lado.\n\n                  </p>\n\n                    </ion-card-content>\n\n                  </ion-card>\n\n\n\n                  <button ion-button block outline style="color:black;border-color: black"(click)="comecarTreino()">Começar Treino</button>\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/exercicios/exercicios.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
     ], ExerciciosPage);
@@ -536,15 +614,15 @@ var ExerciciosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 251:
+/***/ 254:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RotaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_geocoder__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_geocoder__ = __webpack_require__(256);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -627,7 +705,7 @@ var RotaPage = /** @class */ (function () {
     };
     RotaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-rota',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/rota/rota.html"*/'<!--\n  Generated template for the RotaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n    <ion-item>\n        <ion-label stacked>De onde?</ion-label>\n        <ion-input type="text"[(ngModel)]="originPosition"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-label stacked>Para onde?</ion-label>\n        <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>\n      </ion-item>\n\n      <button ion-button block  outline  style="color:black;border-color: black" (click)="calculateRoute()">Traçar rota!</button>\n    <br><br>\n\n    <div #map id="map"></div>\n\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/rota/rota.html"*/,
+            selector: 'page-rota',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/rota/rota.html"*/'<!--\n\n  Generated template for the RotaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n    <ion-item>\n\n        <ion-label stacked>De onde?</ion-label>\n\n        <ion-input type="text"[(ngModel)]="originPosition"></ion-input>\n\n      </ion-item>\n\n\n\n      <ion-item>\n\n        <ion-label stacked>Para onde?</ion-label>\n\n        <ion-input type="text" [(ngModel)]="destinationPosition"></ion-input>\n\n      </ion-item>\n\n\n\n      <button ion-button block  outline  style="color:black;border-color: black" (click)="calculateRoute()">Traçar rota!</button>\n\n    <br><br>\n\n\n\n    <div #map id="map"></div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/rota/rota.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_geocoder__["a" /* NativeGeocoder */]])
     ], RotaPage);
@@ -638,7 +716,7 @@ var RotaPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 254:
+/***/ 257:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -646,7 +724,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExerciciosPageModule", function() { return ExerciciosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exercicios__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exercicios__ = __webpack_require__(253);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -676,7 +754,7 @@ var ExerciciosPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 255:
+/***/ 258:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -684,7 +762,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FbPageModule", function() { return FbPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fb__ = __webpack_require__(487);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fb__ = __webpack_require__(491);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -714,7 +792,7 @@ var FbPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 256:
+/***/ 259:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -722,8 +800,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImcPageModule", function() { return ImcPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imc__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imc__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_brmasker_ionic_3__ = __webpack_require__(311);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -755,7 +833,7 @@ var ImcPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 259:
+/***/ 260:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -763,7 +841,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(139);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -793,7 +871,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 260:
+/***/ 261:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -801,7 +879,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -831,7 +909,7 @@ var MenuPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 261:
+/***/ 262:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -839,7 +917,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RotaPageModule", function() { return RotaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rota__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rota__ = __webpack_require__(254);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -869,7 +947,7 @@ var RotaPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 262:
+/***/ 263:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -877,7 +955,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SobrePageModule", function() { return SobrePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sobre__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sobre__ = __webpack_require__(251);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -907,13 +985,13 @@ var SobrePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 310:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(445);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -921,41 +999,43 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 443:
+/***/ 445:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_cronometro_inicio_cronometro_inicio__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_menu_menu_module__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_menu_menu__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_exercicios_exercicios_module__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pages_menu_menu_module__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_menu_menu__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_exercicios_exercicios_module__ = __webpack_require__(257);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(508);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_cronometro_cronometro__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_login_login_module__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_rota_rota_module__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_fb_fb_module__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_imc_imc_module__ = __webpack_require__(256);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_resultado_resultado__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_sobre_sobre_module__ = __webpack_require__(262);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_geolocation__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_facebook__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_native_geocoder__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_fire__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_fire_database__ = __webpack_require__(509);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_fire_auth__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(509);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_cronometro_cronometro__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_login_login_module__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_rota_rota_module__ = __webpack_require__(262);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_fb_fb_module__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_imc_imc_module__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_resultado_resultado__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_sobre_sobre_module__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_geolocation__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_facebook__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_native_geocoder__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_fire__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_fire_database__ = __webpack_require__(510);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_fire_auth__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cadastro_cadastro__ = __webpack_require__(163);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -997,11 +1077,13 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_11__pages_cronometro_cronometro__["a" /* CronometroPage */],
                 __WEBPACK_IMPORTED_MODULE_16__pages_resultado_resultado__["a" /* ResultadoPage */],
                 __WEBPACK_IMPORTED_MODULE_0__pages_cronometro_inicio_cronometro_inicio__["a" /* CronometroInicioPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_cadastro_cadastro__["a" /* CadastroPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cronometro-inicio/cronometro-inicio.module#CronometroInicioPageModule', name: 'CronometroInicioPage', segment: 'cronometro-inicio', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cronometro/cronometro.module#CronometroPageModule', name: 'CronometroPage', segment: 'cronometro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/exercicios/exercicios.module#ExerciciosPageModule', name: 'ExerciciosPage', segment: 'exercicios', priority: 'low', defaultHistory: [] },
@@ -1033,6 +1115,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_16__pages_resultado_resultado__["a" /* ResultadoPage */],
                 __WEBPACK_IMPORTED_MODULE_2__pages_menu_menu__["a" /* MenuPage */],
                 __WEBPACK_IMPORTED_MODULE_0__pages_cronometro_inicio_cronometro_inicio__["a" /* CronometroInicioPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_cadastro_cadastro__["a" /* CadastroPage */],
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
@@ -1051,16 +1134,16 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 487:
+/***/ 491:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FbPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_facebook__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase_app__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_facebook__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase_app__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase_app__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1204,7 +1287,7 @@ var FbPage = /** @class */ (function () {
     };
     FbPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-fb',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/fb/fb.html"*/'<!--\n  Generated template for the FbPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>fb</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n <button ion-button block (click)="loginFb()">Lgoi</button>\n <button ion-button block (click)="logoutFb()">log</button>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/fb/fb.html"*/,
+            selector: 'page-fb',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/fb/fb.html"*/'<!--\n\n  Generated template for the FbPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>fb</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n <button ion-button block (click)="loginFb()">Lgoi</button>\n\n <button ion-button block (click)="logoutFb()">log</button>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/fb/fb.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_facebook__["a" /* Facebook */], __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */]])
     ], FbPage);
@@ -1215,17 +1298,17 @@ var FbPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 508:
+/***/ 509:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(139);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1272,7 +1355,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/app/app.html"*/'<ion-menu side="left" id="myMenu" [content]="content">\n\n  <ion-toolbar>\n    <ion-title>Menu</ion-title>\n\n  </ion-toolbar>\n  <ion-content>\n    <ion-list>\n      <button ion-item>\n        blank\n      </button>\n      <button ion-item (click)="setRootPage(\'MenuPage\')" class="itemMenu">\n        <ion-icon name="home" class="iconMenu"></ion-icon>\n        Menu\n      </button>\n      <button ion-item (click)="openHome()" class="itemMenu">\n        <ion-icon name="home" class="iconMenu"></ion-icon>\n        Exercitar\n      </button>\n      <button ion-item (click)="openPage(\'ExerciciosPage\')" class="itemMenu">\n        <ion-icon name="bicycle" class="iconMenu"></ion-icon>\n        Tipos de Exercícios\n      </button>\n      <button ion-item (click)="openPage(\'RotaPage\')" class="itemMenu">\n          <ion-icon name="walk" class="iconMenu"></ion-icon>\n          Traçar Rota\n      </button>\n      <button ion-item (click)="openPage(\'ImcPage\')" class="itemMenu">\n          <ion-icon name="stats" class="iconMenu"></ion-icon>\n          Calcular IMC\n      </button>\n      <button ion-item (click)="openPage(\'SobrePage\')" class="itemMenu">\n          <ion-icon name="cafe" class="iconMenu"></ion-icon>\n          Sobre nós\n      </button>\n      <button ion-item (click)="openPage(\'LoginPage\')" class="itemMenu">\n          <ion-icon name="power" class="iconMenu"></ion-icon>\n          Deslogar\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav id="nav" [root]="rootPage" #content></ion-nav>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/app/app.html"*/'<ion-menu side="left" id="myMenu" [content]="content">\n\n\n\n  <ion-toolbar>\n\n    <ion-title>Menu</ion-title>\n\n\n\n  </ion-toolbar>\n\n  <ion-content>\n\n    <ion-list>\n\n      <button ion-item>\n\n        blank\n\n      </button>\n\n      <button ion-item (click)="setRootPage(\'MenuPage\')" class="itemMenu">\n\n        <ion-icon name="home" class="iconMenu"></ion-icon>\n\n        Menu\n\n      </button>\n\n      <button ion-item (click)="openHome()" class="itemMenu">\n\n        <ion-icon name="home" class="iconMenu"></ion-icon>\n\n        Exercitar\n\n      </button>\n\n      <button ion-item (click)="openPage(\'ExerciciosPage\')" class="itemMenu">\n\n        <ion-icon name="bicycle" class="iconMenu"></ion-icon>\n\n        Tipos de Exercícios\n\n      </button>\n\n      <button ion-item (click)="openPage(\'RotaPage\')" class="itemMenu">\n\n          <ion-icon name="walk" class="iconMenu"></ion-icon>\n\n          Traçar Rota\n\n      </button>\n\n      <button ion-item (click)="openPage(\'ImcPage\')" class="itemMenu">\n\n          <ion-icon name="stats" class="iconMenu"></ion-icon>\n\n          Calcular IMC\n\n      </button>\n\n      <button ion-item (click)="openPage(\'SobrePage\')" class="itemMenu">\n\n          <ion-icon name="cafe" class="iconMenu"></ion-icon>\n\n          Sobre nós\n\n      </button>\n\n      <button ion-item (click)="openPage(\'LoginPage\')" class="itemMenu">\n\n          <ion-icon name="power" class="iconMenu"></ion-icon>\n\n          Deslogar\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n<ion-nav id="nav" [root]="rootPage" #content></ion-nav>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */]])
     ], MyApp);
@@ -1283,18 +1366,18 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 85:
+/***/ 88:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_login__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sobre_sobre__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imc_imc__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exercicios_exercicios__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__login_login__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sobre_sobre__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imc_imc__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exercicios_exercicios__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__rota_rota__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__rota_rota__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cronometro_inicio_cronometro_inicio__ = __webpack_require__(162);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1347,7 +1430,7 @@ var MenuPage = /** @class */ (function () {
     };
     MenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["n" /* Component */])({
-            selector: 'page-menu',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/menu/menu.html"*/'<!--\n  Generated template for the MenuPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content class="page-menu">\n\n      <ion-card>\n        <img src="assets/imgs/cronometro2.png" (click)="cronometro()" />\n        <div class="card-title">Cronometro</div>\n      </ion-card>\n      \n      <ion-card>\n        <img src="assets/imgs/mapa2.png" (click)="rota()" />\n        <div class="card-title">Rota</div>\n      </ion-card>\n\n      <ion-card>\n        <img src="assets/imgs/imc2.png" (click)="imc()" />\n        <div class="card-title">Imc</div>\n      </ion-card>\n\n      <ion-card>\n        <img src="assets/imgs/correr2.png" (click)="exercicios()" />\n        <div class="card-title">Exercicios</div>\n      </ion-card>\n\n      <ion-card>\n        <img src="assets/imgs/quem2.png" (click)="sobre()" />\n        <div class="card-title">Quem somos</div>\n      </ion-card>\n\n      <ion-card>\n        <img src="assets/imgs/sair2.png" (click)="sair()" />\n        <div class="card-title">Sair</div>\n      </ion-card>\n\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/menu/menu.html"*/,
+            selector: 'page-menu',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/menu/menu.html"*/'<!--\n\n  Generated template for the MenuPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-content class="page-menu">\n\n\n\n      <ion-card>\n\n        <img src="assets/imgs/cronometro2.png" (click)="cronometro()" />\n\n        <div class="card-title">Cronometro</div>\n\n      </ion-card>\n\n      \n\n      <ion-card>\n\n        <img src="assets/imgs/mapa2.png" (click)="rota()" />\n\n        <div class="card-title">Rota</div>\n\n      </ion-card>\n\n\n\n      <ion-card>\n\n        <img src="assets/imgs/imc2.png" (click)="imc()" />\n\n        <div class="card-title">Imc</div>\n\n      </ion-card>\n\n\n\n      <ion-card>\n\n        <img src="assets/imgs/correr2.png" (click)="exercicios()" />\n\n        <div class="card-title">Exercicios</div>\n\n      </ion-card>\n\n\n\n      <ion-card>\n\n        <img src="assets/imgs/quem2.png" (click)="sobre()" />\n\n        <div class="card-title">Quem somos</div>\n\n      </ion-card>\n\n\n\n      <ion-card>\n\n        <img src="assets/imgs/sair2.png" (click)="sair()" />\n\n        <div class="card-title">Sair</div>\n\n      </ion-card>\n\n\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/menu/menu.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* NavParams */]])
     ], MenuPage);
@@ -1358,12 +1441,12 @@ var MenuPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 90:
+/***/ 93:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CronometroPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resultado_resultado__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resultado_resultado__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1493,7 +1576,7 @@ var CronometroPage = /** @class */ (function () {
     CronometroPage.isenabled = true;
     CronometroPage = CronometroPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-            selector: 'page-cronometro',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/cronometro/cronometro.html"*/'<!--\n  Generated template for the CronometroPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n  <p style="text-align: center;font-size: 67px">{{ tempo }}</p>\n  <br><br><br><br>\n  <button ion-button block outline (click)="start()" [disabled]="!isenabled" style="color:black;border-color: black">Começar</button>\n  <button ion-button block outline (click)="pause()" [disabled]="isenabled" style="color:black;border-color:black">{{acao}}</button>\n  <button ion-button block outline (click)="stopAndClean()" style="color:black;border-color: black">Parar e Zerar</button>\n  <button ion-button block outline (click)="abreResultado()" style="color:black;border-color: black">Salvar</button>\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/cronometro/cronometro.html"*/,
+            selector: 'page-cronometro',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/cronometro/cronometro.html"*/'<!--\n\n  Generated template for the CronometroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n\n\n\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n\n\n  <p style="text-align: center;font-size: 67px">{{ tempo }}</p>\n\n  <br><br><br><br>\n\n\n\n  {{exercicio}}\n\n  <button ion-button block outline (click)="start()" [disabled]="!isenabled" style="color:black;border-color: black">Começar</button>\n\n  <button ion-button block outline (click)="pause()" [disabled]="isenabled" style="color:black;border-color:black">{{acao}}</button>\n\n  <button ion-button block outline (click)="stopAndClean()" style="color:black;border-color: black">Parar e Zerar</button>\n\n  <button ion-button block outline (click)="abreResultado()" style="color:black;border-color: black">Salvar</button>\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/cronometro/cronometro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavParams */]])
     ], CronometroPage);
@@ -1505,14 +1588,14 @@ var CronometroPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 91:
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cronometro_cronometro__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cronometro_cronometro__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(26);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1572,7 +1655,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/phablo/Downloads/FitTools/src/pages/home/home.html"*/'\n<ion-content padding>\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n  <p style="text-align: center; color: black">{{ mensagem }}</p>\n  <form [formGroup]="sprintForm" (submit)="burn()" novalidate>\n    <ion-item>\n      <ion-label floating style="color: black">Tempo de cada exercício (em minutos)</ion-label>\n      <ion-input type="number" [(ngModel)]="sprint" formControlName="sprint"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Dia do exercício</ion-label>\n      <ion-datetime formControlName="dateSprint" [(ngModel)]="dateSprint" cancelText="Cancelar" okText="Confirmar" displayFormat="DD/MM/YYYY" pickerFormat="DD/MMMM/YYYY"\n        monthNames="janeiro, fevereiro, mar\u00e7o, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" color="secondary"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>Quantidade de atividades</ion-label>\n      <ion-range formControlName="choiceSprint" min="0" max="10" pin="true" [(ngModel)]="choiceSprint" color="secondary">\n      </ion-range>\n    </ion-item>\n\n    <br><br><br><br>\n    <button ion-button block outline style="color:black;border-color: black">Queimar gorduras!</button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/home/phablo/Downloads/FitTools/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/media/paulo/DATA/codeJs/FitTools/src/pages/home/home.html"*/'\n\n<ion-content padding>\n\n    <img  style="width: 50px; height: 50px;" src="assets/imgs/voltar.png" (click)="voltar()" />\n\n\n\n  <p style="text-align: center; color: black">{{ mensagem }}</p>\n\n  <form [formGroup]="sprintForm" (submit)="burn()" novalidate>\n\n    <ion-item>\n\n      <ion-label floating style="color: black">Tempo de cada exercício (em minutos)</ion-label>\n\n      <ion-input type="number" [(ngModel)]="sprint" formControlName="sprint"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Dia do exercício</ion-label>\n\n      <ion-datetime formControlName="dateSprint" [(ngModel)]="dateSprint" cancelText="Cancelar" okText="Confirmar" displayFormat="DD/MM/YYYY" pickerFormat="DD/MMMM/YYYY"\n\n        monthNames="janeiro, fevereiro, mar\u00e7o, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" color="secondary"></ion-datetime>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Quantidade de atividades</ion-label>\n\n      <ion-range formControlName="choiceSprint" min="0" max="10" pin="true" [(ngModel)]="choiceSprint" color="secondary">\n\n      </ion-range>\n\n    </ion-item>\n\n\n\n    <br><br><br><br>\n\n    <button ion-button block outline style="color:black;border-color: black">Queimar gorduras!</button>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"/media/paulo/DATA/codeJs/FitTools/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]])
     ], HomePage);
@@ -1583,5 +1666,5 @@ var HomePage = /** @class */ (function () {
 
 /***/ })
 
-},[310]);
+},[312]);
 //# sourceMappingURL=main.js.map
